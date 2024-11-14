@@ -1,0 +1,1941 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rastreamento Metabólico</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+  
+
+
+</head>
+<body>
+    <h1>Estética e Saúde Integrativa</h1>
+    <h2>Rastreamento Metabólico (Últimos 30 Dias)</h2>
+    <form id="metabolic-form">
+       
+        <!-- Informações do Paciente -->
+        <div class="info">
+            <label>Paciente: <input type="text" name="paciente" required></label>
+            <label>Idade: <input type="number" name="idade" required></label>
+            <label>Peso: <input type="text" name="peso" required></label>
+            <label>Altura: <input type="text" name="altura" required></label>
+            <label>Mulher:</label>
+            <label><input type="checkbox" name="menstrua"> Menstrua</label>
+            <label><input type="checkbox" name="menopausada"> Menopausa</label>
+            <label><input type="checkbox" name="reposicao"> Faz reposição</label>
+        </div>
+        
+        <div><p><span style="background-color: #4a91e273; color: rgb(19, 1, 1);">Avalie seus sintomas, responda de acordo com a frequência. No final, clique em <strong>calcular pontuação</strong>, 
+            e depois clique em <strong>enviar resultados</strong>. <br>Responda a essas perguntas da melhor forma possível, pensando em como tem se sentido no último mês. <br><br></span>
+        </p>
+        <p> 
+           <li><strong>0    Nunca ou quase nunca tem o sintoma.
+           </li></strong> <br>
+           <li><strong> 1  Tem ocasionalmente, o efeito não é severo.</li></strong> <br>
+           <li><strong>2   Tem ocasionalmente, o efeito é severo.</strong>
+           </li><br>
+           <li><strong>3  Tem frequentemente, o efeito não é severo.</li</strong><br> <br>
+           <li><strong>4  Tem frequentemente, o efeito é severo.</li></strong> <br>
+            </p>
+        </div>
+
+        <!-- Cabeça -->
+        <section>
+            <h3>Cabeça</h3>
+            <div class="question">
+                <label>Dores</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="cabeca_dores_0" name="cabeca_dores" value="0" required>
+                    <label for="cabeca_dores_0">0</label>
+                    <input type="radio" id="cabeca_dores_1" name="cabeca_dores" value="1">
+                    <label for="cabeca_dores_1">1</label>
+                    <input type="radio" id="cabeca_dores_2" name="cabeca_dores" value="2">
+                    <label for="cabeca_dores_2">2</label>
+                    <input type="radio" id="cabeca_dores_3" name="cabeca_dores" value="3">
+                    <label for="cabeca_dores_3">3</label>
+                    <input type="radio" id="cabeca_dores_4" name="cabeca_dores" value="4">
+                    <label for="cabeca_dores_4">4</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>Desmaio ou sensação</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="cabeca_desmaio_0" name="cabeca_desmaio" value="0" required>
+                    <label for="cabeca_desmaio_0">0</label>
+                    <input type="radio" id="cabeca_desmaio_1" name="cabeca_desmaio" value="1">
+                    <label for="cabeca_desmaio_1">1</label>
+                    <input type="radio" id="cabeca_desmaio_2" name="cabeca_desmaio" value="2">
+                    <label for="cabeca_desmaio_2">2</label>
+                    <input type="radio" id="cabeca_desmaio_3" name="cabeca_desmaio" value="3">
+                    <label for="cabeca_desmaio_3">3</label>
+                    <input type="radio" id="cabeca_desmaio_4" name="cabeca_desmaio" value="4">
+                    <label for="cabeca_desmaio_4">4</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>Tontura</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="cabeca_tontura_0" name="cabeca_tontura" value="0" required>
+                    <label for="cabeca_tontura_0">0</label>
+                    <input type="radio" id="cabeca_tontura_1" name="cabeca_tontura" value="1">
+                    <label for="cabeca_tontura_1">1</label>
+                    <input type="radio" id="cabeca_tontura_2" name="cabeca_tontura" value="2">
+                    <label for="cabeca_tontura_2">2</label>
+                    <input type="radio" id="cabeca_tontura_3" name="cabeca_tontura" value="3">
+                    <label for="cabeca_tontura_3">3</label>
+                    <input type="radio" id="cabeca_tontura_4" name="cabeca_tontura" value="4">
+                    <label for="cabeca_tontura_4">4</label>
+                </div>
+            </div>
+            <div class="question">
+                <label>Insônia</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="cabeca_insomnia_0" name="cabeca_insomnia" value="0" required>
+                    <label for="cabeca_insomnia_0">0</label>
+                    <input type="radio" id="cabeca_insomnia_1" name="cabeca_insomnia" value="1">
+                    <label for="cabeca_insomnia_1">1</label>
+                    <input type="radio" id="cabeca_insomnia_2" name="cabeca_insomnia" value="2">
+                    <label for="cabeca_insomnia_2">2</label>
+                    <input type="radio" id="cabeca_insomnia_3" name="cabeca_insomnia" value="3">
+                    <label for="cabeca_insomnia_3">3</label>
+                    <input type="radio" id="cabeca_insomnia_4" name="cabeca_insomnia" value="4">
+                    <label for="cabeca_insomnia_4">4</label>
+                </div>
+            </div>
+            <div class="category-score" id="score-cabeca">Soma da Categoria Cabeça: <span id="cabeca-sum">0</span></div>
+        </section>
+
+        <!-- Olhos -->
+        <section>
+            <h3>Olhos</h3>
+        
+            <div class="question">
+                <label>Lacrimosos ou com coceira</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="lacrimosos_0" name="lacrimosos" value="0" required>
+                    <label for="lacrimosos_0">0</label>
+                    <input type="radio" id="lacrimosos_1" name="lacrimosos" value="1">
+                    <label for="lacrimosos_1">1</label>
+                    <input type="radio" id="lacrimosos_2" name="lacrimosos" value="2">
+                    <label for="lacrimosos_2">2</label>
+                    <input type="radio" id="lacrimosos_3" name="lacrimosos" value="3">
+                    <label for="lacrimosos_3">3</label>
+                    <input type="radio" id="lacrimosos_4" name="lacrimosos" value="4">
+                    <label for="lacrimosos_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Inchados, vermelhos, ou cílios grudando</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="inchados_0" name="inchados" value="0" required>
+                    <label for="inchados_0">0</label>
+                    <input type="radio" id="inchados_1" name="inchados" value="1">
+                    <label for="inchados_1">1</label>
+                    <input type="radio" id="inchados_2" name="inchados" value="2">
+                    <label for="inchados_2">2</label>
+                    <input type="radio" id="inchados_3" name="inchados" value="3">
+                    <label for="inchados_3">3</label>
+                    <input type="radio" id="inchados_4" name="inchados" value="4">
+                    <label for="inchados_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Bolsas ou olheiras</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="bolsas_0" name="bolsas" value="0" required>
+                    <label for="bolsas_0">0</label>
+                    <input type="radio" id="bolsas_1" name="bolsas" value="1">
+                    <label for="bolsas_1">1</label>
+                    <input type="radio" id="bolsas_2" name="bolsas" value="2">
+                    <label for="bolsas_2">2</label>
+                    <input type="radio" id="bolsas_3" name="bolsas" value="3">
+                    <label for="bolsas_3">3</label>
+                    <input type="radio" id="bolsas_4" name="bolsas" value="4">
+                    <label for="bolsas_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Visão borrada ou em túnel (não inclui miopia ou hipermetropia)</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="visao_borrada_0" name="visao_borrada" value="0" required>
+                    <label for="visao_borrada_0">0</label>
+                    <input type="radio" id="visao_borrada_1" name="visao_borrada" value="1">
+                    <label for="visao_borrada_1">1</label>
+                    <input type="radio" id="visao_borrada_2" name="visao_borrada" value="2">
+                    <label for="visao_borrada_2">2</label>
+                    <input type="radio" id="visao_borrada_3" name="visao_borrada" value="3">
+                    <label for="visao_borrada_3">3</label>
+                    <input type="radio" id="visao_borrada_4" name="visao_borrada" value="4">
+                    <label for="visao_borrada_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-olhos">Soma da Categoria Olhos: <span id="olhos-sum">0</span></div>
+        </section>
+
+
+
+
+        <!--nariz-->
+        <section>
+            <h3>Nariz</h3>
+        
+            <div class="question">
+                <label>Nariz entupido</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="nariz_entupido_0" name="nariz_entupido" value="0" required>
+                    <label for="nariz_entupido_0">0</label>
+                    <input type="radio" id="nariz_entupido_1" name="nariz_entupido" value="1">
+                    <label for="nariz_entupido_1">1</label>
+                    <input type="radio" id="nariz_entupido_2" name="nariz_entupido" value="2">
+                    <label for="nariz_entupido_2">2</label>
+                    <input type="radio" id="nariz_entupido_3" name="nariz_entupido" value="3">
+                    <label for="nariz_entupido_3">3</label>
+                    <input type="radio" id="nariz_entupido_4" name="nariz_entupido" value="4">
+                    <label for="nariz_entupido_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Sinusite</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="sinusite_0" name="sinusite" value="0" required>
+                    <label for="sinusite_0">0</label>
+                    <input type="radio" id="sinusite_1" name="sinusite" value="1">
+                    <label for="sinusite_1">1</label>
+                    <input type="radio" id="sinusite_2" name="sinusite" value="2">
+                    <label for="sinusite_2">2</label>
+                    <input type="radio" id="sinusite_3" name="sinusite" value="3">
+                    <label for="sinusite_3">3</label>
+                    <input type="radio" id="sinusite_4" name="sinusite" value="4">
+                    <label for="sinusite_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Febre do feno (Corrimento nasal, espirros, tosse, rinite alérgica, lacrimejando)</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="febre_feno_0" name="febre_feno" value="0" required>
+                    <label for="febre_feno_0">0</label>
+                    <input type="radio" id="febre_feno_1" name="febre_feno" value="1">
+                    <label for="febre_feno_1">1</label>
+                    <input type="radio" id="febre_feno_2" name="febre_feno" value="2">
+                    <label for="febre_feno_2">2</label>
+                    <input type="radio" id="febre_feno_3" name="febre_feno" value="3">
+                    <label for="febre_feno_3">3</label>
+                    <input type="radio" id="febre_feno_4" name="febre_feno" value="4">
+                    <label for="febre_feno_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Ataques de espirro</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="ataques_espirro_0" name="ataques_espirro" value="0" required>
+                    <label for="ataques_espirro_0">0</label>
+                    <input type="radio" id="ataques_espirro_1" name="ataques_espirro" value="1">
+                    <label for="ataques_espirro_1">1</label>
+                    <input type="radio" id="ataques_espirro_2" name="ataques_espirro" value="2">
+                    <label for="ataques_espirro_2">2</label>
+                    <input type="radio" id="ataques_espirro_3" name="ataques_espirro" value="3">
+                    <label for="ataques_espirro_3">3</label>
+                    <input type="radio" id="ataques_espirro_4" name="ataques_espirro" value="4">
+                    <label for="ataques_espirro_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Formação excessiva de muco</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="formacao_muco_0" name="formacao_muco" value="0" required>
+                    <label for="formacao_muco_0">0</label>
+                    <input type="radio" id="formacao_muco_1" name="formacao_muco" value="1">
+                    <label for="formacao_muco_1">1</label>
+                    <input type="radio" id="formacao_muco_2" name="formacao_muco" value="2">
+                    <label for="formacao_muco_2">2</label>
+                    <input type="radio" id="formacao_muco_3" name="formacao_muco" value="3">
+                    <label for="formacao_muco_3">3</label>
+                    <input type="radio" id="formacao_muco_4" name="formacao_muco" value="4">
+                    <label for="formacao_muco_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-nariz">Soma da Categoria Nariz: <span id="nariz-sum">0</span></div>
+        </section>
+
+        <!--boca-->
+        <section>
+            <h3>Boca/Garganta</h3>
+        
+            <div class="question">
+                <label>Tosse crônica</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="tosse_cronica_0" name="tosse_cronica" value="0" required>
+                    <label for="tosse_cronica_0">0</label>
+                    <input type="radio" id="tosse_cronica_1" name="tosse_cronica" value="1">
+                    <label for="tosse_cronica_1">1</label>
+                    <input type="radio" id="tosse_cronica_2" name="tosse_cronica" value="2">
+                    <label for="tosse_cronica_2">2</label>
+                    <input type="radio" id="tosse_cronica_3" name="tosse_cronica" value="3">
+                    <label for="tosse_cronica_3">3</label>
+                    <input type="radio" id="tosse_cronica_4" name="tosse_cronica" value="4">
+                    <label for="tosse_cronica_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Engasgo, necessidade frequente de limpar a garganta</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="engasgo_0" name="engasgo" value="0" required>
+                    <label for="engasgo_0">0</label>
+                    <input type="radio" id="engasgo_1" name="engasgo" value="1">
+                    <label for="engasgo_1">1</label>
+                    <input type="radio" id="engasgo_2" name="engasgo" value="2">
+                    <label for="engasgo_2">2</label>
+                    <input type="radio" id="engasgo_3" name="engasgo" value="3">
+                    <label for="engasgo_3">3</label>
+                    <input type="radio" id="engasgo_4" name="engasgo" value="4">
+                    <label for="engasgo_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Garganta inflamada, rouquidão, perda de voz</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="garganta_inflamada_0" name="garganta_inflamada" value="0" required>
+                    <label for="garganta_inflamada_0">0</label>
+                    <input type="radio" id="garganta_inflamada_1" name="garganta_inflamada" value="1">
+                    <label for="garganta_inflamada_1">1</label>
+                    <input type="radio" id="garganta_inflamada_2" name="garganta_inflamada" value="2">
+                    <label for="garganta_inflamada_2">2</label>
+                    <input type="radio" id="garganta_inflamada_3" name="garganta_inflamada" value="3">
+                    <label for="garganta_inflamada_3">3</label>
+                    <input type="radio" id="garganta_inflamada_4" name="garganta_inflamada" value="4">
+                    <label for="garganta_inflamada_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Língua, gengivas e lábios inchados ou esbranquiçados</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="lingua_inchada_0" name="lingua_inchada" value="0" required>
+                    <label for="lingua_inchada_0">0</label>
+                    <input type="radio" id="lingua_inchada_1" name="lingua_inchada" value="1">
+                    <label for="lingua_inchada_1">1</label>
+                    <input type="radio" id="lingua_inchada_2" name="lingua_inchada" value="2">
+                    <label for="lingua_inchada_2">2</label>
+                    <input type="radio" id="lingua_inchada_3" name="lingua_inchada" value="3">
+                    <label for="lingua_inchada_3">3</label>
+                    <input type="radio" id="lingua_inchada_4" name="lingua_inchada" value="4">
+                    <label for="lingua_inchada_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Aftas</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="aftas_0" name="aftas" value="0" required>
+                    <label for="aftas_0">0</label>
+                    <input type="radio" id="aftas_1" name="aftas" value="1">
+                    <label for="aftas_1">1</label>
+                    <input type="radio" id="aftas_2" name="aftas" value="2">
+                    <label for="aftas_2">2</label>
+                    <input type="radio" id="aftas_3" name="aftas" value="3">
+                    <label for="aftas_3">3</label>
+                    <input type="radio" id="aftas_4" name="aftas" value="4">
+                    <label for="aftas_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-boca-garganta">Soma da Categoria Boca/Garganta: <span id="boca-garganta-sum">0</span></div>
+        </section>
+        <!--ouvido-->
+        <section>
+            <h3>Ouvidos</h3>
+        
+            <div class="question">
+                <label>Coceira</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="coceira_0" name="coceira" value="0" required>
+                    <label for="coceira_0">0</label>
+                    <input type="radio" id="coceira_1" name="coceira" value="1">
+                    <label for="coceira_1">1</label>
+                    <input type="radio" id="coceira_2" name="coceira" value="2">
+                    <label for="coceira_2">2</label>
+                    <input type="radio" id="coceira_3" name="coceira" value="3">
+                    <label for="coceira_3">3</label>
+                    <input type="radio" id="coceira_4" name="coceira" value="4">
+                    <label for="coceira_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Dores e infecções</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="dores_infeccao_0" name="dores_infeccao" value="0" required>
+                    <label for="dores_infeccao_0">0</label>
+                    <input type="radio" id="dores_infeccao_1" name="dores_infeccao" value="1">
+                    <label for="dores_infeccao_1">1</label>
+                    <input type="radio" id="dores_infeccao_2" name="dores_infeccao" value="2">
+                    <label for="dores_infeccao_2">2</label>
+                    <input type="radio" id="dores_infeccao_3" name="dores_infeccao" value="3">
+                    <label for="dores_infeccao_3">3</label>
+                    <input type="radio" id="dores_infeccao_4" name="dores_infeccao" value="4">
+                    <label for="dores_infeccao_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Supuração</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="supuracao_0" name="supuracao" value="0" required>
+                    <label for="supuracao_0">0</label>
+                    <input type="radio" id="supuracao_1" name="supuracao" value="1">
+                    <label for="supuracao_1">1</label>
+                    <input type="radio" id="supuracao_2" name="supuracao" value="2">
+                    <label for="supuracao_2">2</label>
+                    <input type="radio" id="supuracao_3" name="supuracao" value="3">
+                    <label for="supuracao_3">3</label>
+                    <input type="radio" id="supuracao_4" name="supuracao" value="4">
+                    <label for="supuracao_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Zumbido, perda de audição</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="zumbido_0" name="zumbido" value="0" required>
+                    <label for="zumbido_0">0</label>
+                    <input type="radio" id="zumbido_1" name="zumbido" value="1">
+                    <label for="zumbido_1">1</label>
+                    <input type="radio" id="zumbido_2" name="zumbido" value="2">
+                    <label for="zumbido_2">2</label>
+                    <input type="radio" id="zumbido_3" name="zumbido" value="3">
+                    <label for="zumbido_3">3</label>
+                    <input type="radio" id="zumbido_4" name="zumbido" value="4">
+                    <label for="zumbido_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-ouvidos">Soma da Categoria Ouvidos: <span id="ouvidos-sum">0</span></div>
+        </section>
+        <!--digestivo-->
+        <section>
+            <h3>Trato Digestivo</h3>
+        
+            <div class="question">
+                <label>Náusea e vômitos</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="nausea_vomitos_0" name="nausea_vomitos" value="0" required>
+                    <label for="nausea_vomitos_0">0</label>
+                    <input type="radio" id="nausea_vomitos_1" name="nausea_vomitos" value="1">
+                    <label for="nausea_vomitos_1">1</label>
+                    <input type="radio" id="nausea_vomitos_2" name="nausea_vomitos" value="2">
+                    <label for="nausea_vomitos_2">2</label>
+                    <input type="radio" id="nausea_vomitos_3" name="nausea_vomitos" value="3">
+                    <label for="nausea_vomitos_3">3</label>
+                    <input type="radio" id="nausea_vomitos_4" name="nausea_vomitos" value="4">
+                    <label for="nausea_vomitos_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Diarreia</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="diarreia_0" name="diarreia" value="0" required>
+                    <label for="diarreia_0">0</label>
+                    <input type="radio" id="diarreia_1" name="diarreia" value="1">
+                    <label for="diarreia_1">1</label>
+                    <input type="radio" id="diarreia_2" name="diarreia" value="2">
+                    <label for="diarreia_2">2</label>
+                    <input type="radio" id="diarreia_3" name="diarreia" value="3">
+                    <label for="diarreia_3">3</label>
+                    <input type="radio" id="diarreia_4" name="diarreia" value="4">
+                    <label for="diarreia_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Prisão de ventre/ constipação</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="prisao_0" name="prisao" value="0" required>
+                    <label for="prisao_0">0</label>
+                    <input type="radio" id="prisao_1" name="prisao" value="1">
+                    <label for="prisao_1">1</label>
+                    <input type="radio" id="prisao_2" name="prisao" value="2">
+                    <label for="prisao_2">2</label>
+                    <input type="radio" id="prisao_3" name="prisao" value="3">
+                    <label for="prisao_3">3</label>
+                    <input type="radio" id="prisao_4" name="prisao" value="4">
+                    <label for="prisao_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Distensão abdominal/ inchaço</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="distensao_0" name="distensao" value="0" required>
+                    <label for="distensao_0">0</label>
+                    <input type="radio" id="distensao_1" name="distensao" value="1">
+                    <label for="distensao_1">1</label>
+                    <input type="radio" id="distensao_2" name="distensao" value="2">
+                    <label for="distensao_2">2</label>
+                    <input type="radio" id="distensao_3" name="distensao" value="3">
+                    <label for="distensao_3">3</label>
+                    <input type="radio" id="distensao_4" name="distensao" value="4">
+                    <label for="distensao_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Arrotos, passagem de gás</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="arrotos_0" name="arrotos" value="0" required>
+                    <label for="arrotos_0">0</label>
+                    <input type="radio" id="arrotos_1" name="arrotos" value="1">
+                    <label for="arrotos_1">1</label>
+                    <input type="radio" id="arrotos_2" name="arrotos" value="2">
+                    <label for="arrotos_2">2</label>
+                    <input type="radio" id="arrotos_3" name="arrotos" value="3">
+                    <label for="arrotos_3">3</label>
+                    <input type="radio" id="arrotos_4" name="arrotos" value="4">
+                    <label for="arrotos_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Azia</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="azia_0" name="azia" value="0" required>
+                    <label for="azia_0">0</label>
+                    <input type="radio" id="azia_1" name="azia" value="1">
+                    <label for="azia_1">1</label>
+                    <input type="radio" id="azia_2" name="azia" value="2">
+                    <label for="azia_2">2</label>
+                    <input type="radio" id="azia_3" name="azia" value="3">
+                    <label for="azia_3">3</label>
+                    <input type="radio" id="azia_4" name="azia" value="4">
+                    <label for="azia_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Dor no estômago ou intestinal</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="dor_estomago_0" name="dor_estomago" value="0" required>
+                    <label for="dor_estomago_0">0</label>
+                    <input type="radio" id="dor_estomago_1" name="dor_estomago" value="1">
+                    <label for="dor_estomago_1">1</label>
+                    <input type="radio" id="dor_estomago_2" name="dor_estomago" value="2">
+                    <label for="dor_estomago_2">2</label>
+                    <input type="radio" id="dor_estomago_3" name="dor_estomago" value="3">
+                    <label for="dor_estomago_3">3</label>
+                    <input type="radio" id="dor_estomago_4" name="dor_estomago" value="4">
+                    <label for="dor_estomago_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-trato-digestivo">Soma da Categoria Trato Digestivo: <span id="trato-digestivo-sum">0</span></div>
+        </section>
+        <section>
+            <!--pulmoes-->
+            <h3>Pulmões</h3>
+        
+            <div class="question">
+                <label>Congestão no peito</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="congestao_peito_0" name="congestao_peito" value="0" required>
+                    <label for="congestao_peito_0">0</label>
+                    <input type="radio" id="congestao_peito_1" name="congestao_peito" value="1">
+                    <label for="congestao_peito_1">1</label>
+                    <input type="radio" id="congestao_peito_2" name="congestao_peito" value="2">
+                    <label for="congestao_peito_2">2</label>
+                    <input type="radio" id="congestao_peito_3" name="congestao_peito" value="3">
+                    <label for="congestao_peito_3">3</label>
+                    <input type="radio" id="congestao_peito_4" name="congestao_peito" value="4">
+                    <label for="congestao_peito_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Asma, bronquite</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="asma_0" name="asma" value="0" required>
+                    <label for="asma_0">0</label>
+                    <input type="radio" id="asma_1" name="asma" value="1">
+                    <label for="asma_1">1</label>
+                    <input type="radio" id="asma_2" name="asma" value="2">
+                    <label for="asma_2">2</label>
+                    <input type="radio" id="asma_3" name="asma" value="3">
+                    <label for="asma_3">3</label>
+                    <input type="radio" id="asma_4" name="asma" value="4">
+                    <label for="asma_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Respiração curta. Pouco fôlego</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="respiracao_curta_0" name="respiracao_curta" value="0" required>
+                    <label for="respiracao_curta_0">0</label>
+                    <input type="radio" id="respiracao_curta_1" name="respiracao_curta" value="1">
+                    <label for="respiracao_curta_1">1</label>
+                    <input type="radio" id="respiracao_curta_2" name="respiracao_curta" value="2">
+                    <label for="respiracao_curta_2">2</label>
+                    <input type="radio" id="respiracao_curta_3" name="respiracao_curta" value="3">
+                    <label for="respiracao_curta_3">3</label>
+                    <input type="radio" id="respiracao_curta_4" name="respiracao_curta" value="4">
+                    <label for="respiracao_curta_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Dificuldade em respirar</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="dificuldade_respirar_0" name="dificuldade_respirar" value="0" required>
+                    <label for="dificuldade_respirar_0">0</label>
+                    <input type="radio" id="dificuldade_respirar_1" name="dificuldade_respirar" value="1">
+                    <label for="dificuldade_respirar_1">1</label>
+                    <input type="radio" id="dificuldade_respirar_2" name="dificuldade_respirar" value="2">
+                    <label for="dificuldade_respirar_2">2</label>
+                    <input type="radio" id="dificuldade_respirar_3" name="dificuldade_respirar" value="3">
+                    <label for="dificuldade_respirar_3">3</label>
+                    <input type="radio" id="dificuldade_respirar_4" name="dificuldade_respirar" value="4">
+                    <label for="dificuldade_respirar_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-pulmoes">Soma da Categoria Pulmões: <span id="pulmoes-sum">0</span></div>
+        </section>
+        <!--coração-->
+        <section>
+            <h3>Coração</h3>
+        
+            <div class="question">
+                <label>Batimento irregular ou falho</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="batimento_irregular_0" name="batimento_irregular" value="0" required>
+                    <label for="batimento_irregular_0">0</label>
+                    <input type="radio" id="batimento_irregular_1" name="batimento_irregular" value="1">
+                    <label for="batimento_irregular_1">1</label>
+                    <input type="radio" id="batimento_irregular_2" name="batimento_irregular" value="2">
+                    <label for="batimento_irregular_2">2</label>
+                    <input type="radio" id="batimento_irregular_3" name="batimento_irregular" value="3">
+                    <label for="batimento_irregular_3">3</label>
+                    <input type="radio" id="batimento_irregular_4" name="batimento_irregular" value="4">
+                    <label for="batimento_irregular_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Batimento rápido ou forte</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="batimento_rapido_0" name="batimento_rapido" value="0" required>
+                    <label for="batimento_rapido_0">0</label>
+                    <input type="radio" id="batimento_rapido_1" name="batimento_rapido" value="1">
+                    <label for="batimento_rapido_1">1</label>
+                    <input type="radio" id="batimento_rapido_2" name="batimento_rapido" value="2">
+                    <label for="batimento_rapido_2">2</label>
+                    <input type="radio" id="batimento_rapido_3" name="batimento_rapido" value="3">
+                    <label for="batimento_rapido_3">3</label>
+                    <input type="radio" id="batimento_rapido_4" name="batimento_rapido" value="4">
+                    <label for="batimento_rapido_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Dor no peito</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="dor_peito_0" name="dor_peito" value="0" required>
+                    <label for="dor_peito_0">0</label>
+                    <input type="radio" id="dor_peito_1" name="dor_peito" value="1">
+                    <label for="dor_peito_1">1</label>
+                    <input type="radio" id="dor_peito_2" name="dor_peito" value="2">
+                    <label for="dor_peito_2">2</label>
+                    <input type="radio" id="dor_peito_3" name="dor_peito" value="3">
+                    <label for="dor_peito_3">3</label>
+                    <input type="radio" id="dor_peito_4" name="dor_peito" value="4">
+                    <label for="dor_peito_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-coracao">Soma da Categoria Coração: <span id="coracao-sum">0</span></div>
+        </section>
+        <!--musculos-->
+        <section>
+            <h3>Músculos e articulações</h3>
+        
+            <div class="question">
+                <label>Dor ou sensibilidade nas juntas</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="dor_articulacoes_0" name="dor_articulacoes" value="0" required>
+                    <label for="dor_articulacoes_0">0</label>
+                    <input type="radio" id="dor_articulacoes_1" name="dor_articulacoes" value="1">
+                    <label for="dor_articulacoes_1">1</label>
+                    <input type="radio" id="dor_articulacoes_2" name="dor_articulacoes" value="2">
+                    <label for="dor_articulacoes_2">2</label>
+                    <input type="radio" id="dor_articulacoes_3" name="dor_articulacoes" value="3">
+                    <label for="dor_articulacoes_3">3</label>
+                    <input type="radio" id="dor_articulacoes_4" name="dor_articulacoes" value="4">
+                    <label for="dor_articulacoes_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Artrite / artrose</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="artrite_0" name="artrite" value="0" required>
+                    <label for="artrite_0">0</label>
+                    <input type="radio" id="artrite_1" name="artrite" value="1">
+                    <label for="artrite_1">1</label>
+                    <input type="radio" id="artrite_2" name="artrite" value="2">
+                    <label for="artrite_2">2</label>
+                    <input type="radio" id="artrite_3" name="artrite" value="3">
+                    <label for="artrite_3">3</label>
+                    <input type="radio" id="artrite_4" name="artrite" value="4">
+                    <label for="artrite_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Rigidez ou limitação de movimentos</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="rigidez_0" name="rigidez" value="0" required>
+                    <label for="rigidez_0">0</label>
+                    <input type="radio" id="rigidez_1" name="rigidez" value="1">
+                    <label for="rigidez_1">1</label>
+                    <input type="radio" id="rigidez_2" name="rigidez" value="2">
+                    <label for="rigidez_2">2</label>
+                    <input type="radio" id="rigidez_3" name="rigidez" value="3">
+                    <label for="rigidez_3">3</label>
+                    <input type="radio" id="rigidez_4" name="rigidez" value="4">
+                    <label for="rigidez_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Dor ou sensibilidade nos músculos</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="dor_musculos_0" name="dor_musculos" value="0" required>
+                    <label for="dor_musculos_0">0</label>
+                    <input type="radio" id="dor_musculos_1" name="dor_musculos" value="1">
+                    <label for="dor_musculos_1">1</label>
+                    <input type="radio" id="dor_musculos_2" name="dor_musculos" value="2">
+                    <label for="dor_musculos_2">2</label>
+                    <input type="radio" id="dor_musculos_3" name="dor_musculos" value="3">
+                    <label for="dor_musculos_3">3</label>
+                    <input type="radio" id="dor_musculos_4" name="dor_musculos" value="4">
+                    <label for="dor_musculos_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Sensação de fraqueza ou cansaço</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="fraqueza_0" name="fraqueza" value="0" required>
+                    <label for="fraqueza_0">0</label>
+                    <input type="radio" id="fraqueza_1" name="fraqueza" value="1">
+                    <label for="fraqueza_1">1</label>
+                    <input type="radio" id="fraqueza_2" name="fraqueza" value="2">
+                    <label for="fraqueza_2">2</label>
+                    <input type="radio" id="fraqueza_3" name="fraqueza" value="3">
+                    <label for="fraqueza_3">3</label>
+                    <input type="radio" id="fraqueza_4" name="fraqueza" value="4">
+                    <label for="fraqueza_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-musculos-articulacoes">Soma da Categoria Músculos e articulações: <span id="musculos-sum">0</span></div>
+        </section>
+        <!--pele-->
+        <section>
+            <h3>Pele</h3>
+        
+            <div class="question">
+                <label>Acne</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="acne_0" name="acne" value="0" required>
+                    <label for="acne_0">0</label>
+                    <input type="radio" id="acne_1" name="acne" value="1">
+                    <label for="acne_1">1</label>
+                    <input type="radio" id="acne_2" name="acne" value="2">
+                    <label for="acne_2">2</label>
+                    <input type="radio" id="acne_3" name="acne" value="3">
+                    <label for="acne_3">3</label>
+                    <input type="radio" id="acne_4" name="acne" value="4">
+                    <label for="acne_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Urticária, pele seca, erupções</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="urticaria_0" name="urticaria" value="0" required>
+                    <label for="urticaria_0">0</label>
+                    <input type="radio" id="urticaria_1" name="urticaria" value="1">
+                    <label for="urticaria_1">1</label>
+                    <input type="radio" id="urticaria_2" name="urticaria" value="2">
+                    <label for="urticaria_2">2</label>
+                    <input type="radio" id="urticaria_3" name="urticaria" value="3">
+                    <label for="urticaria_3">3</label>
+                    <input type="radio" id="urticaria_4" name="urticaria" value="4">
+                    <label for="urticaria_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Perda de cabelo</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="perda_cabelo_0" name="perda_cabelo" value="0" required>
+                    <label for="perda_cabelo_0">0</label>
+                    <input type="radio" id="perda_cabelo_1" name="perda_cabelo" value="1">
+                    <label for="perda_cabelo_1">1</label>
+                    <input type="radio" id="perda_cabelo_2" name="perda_cabelo" value="2">
+                    <label for="perda_cabelo_2">2</label>
+                    <input type="radio" id="perda_cabelo_3" name="perda_cabelo" value="3">
+                    <label for="perda_cabelo_3">3</label>
+                    <input type="radio" id="perda_cabelo_4" name="perda_cabelo" value="4">
+                    <label for="perda_cabelo_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Rubores (vermelhidão), ondas de calor</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="rubores_0" name="rubores" value="0" required>
+                    <label for="rubores_0">0</label>
+                    <input type="radio" id="rubores_1" name="rubores" value="1">
+                    <label for="rubores_1">1</label>
+                    <input type="radio" id="rubores_2" name="rubores" value="2">
+                    <label for="rubores_2">2</label>
+                    <input type="radio" id="rubores_3" name="rubores" value="3">
+                    <label for="rubores_3">3</label>
+                    <input type="radio" id="rubores_4" name="rubores" value="4">
+                    <label for="rubores_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Suor excessivo</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="suor_excessivo_0" name="suor_excessivo" value="0" required>
+                    <label for="suor_excessivo_0">0</label>
+                    <input type="radio" id="suor_excessivo_1" name="suor_excessivo" value="1">
+                    <label for="suor_excessivo_1">1</label>
+                    <input type="radio" id="suor_excessivo_2" name="suor_excessivo" value="2">
+                    <label for="suor_excessivo_2">2</label>
+                    <input type="radio" id="suor_excessivo_3" name="suor_excessivo" value="3">
+                    <label for="suor_excessivo_3">3</label>
+                    <input type="radio" id="suor_excessivo_4" name="suor_excessivo" value="4">
+                    <label for="suor_excessivo_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-pele">Soma da Categoria Pele: <span id="pele-sum">0</span></div>
+        </section>
+
+        <!--peso-->
+        <section>
+            <h3>Peso</h3>
+        
+            <div class="question">
+                <label>Comer e beber em excesso</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="comer_beber_excesso_0" name="comer_beber_excesso" value="0" required>
+                    <label for="comer_beber_excesso_0">0</label>
+                    <input type="radio" id="comer_beber_excesso_1" name="comer_beber_excesso" value="1">
+                    <label for="comer_beber_excesso_1">1</label>
+                    <input type="radio" id="comer_beber_excesso_2" name="comer_beber_excesso" value="2">
+                    <label for="comer_beber_excesso_2">2</label>
+                    <input type="radio" id="comer_beber_excesso_3" name="comer_beber_excesso" value="3">
+                    <label for="comer_beber_excesso_3">3</label>
+                    <input type="radio" id="comer_beber_excesso_4" name="comer_beber_excesso" value="4">
+                    <label for="comer_beber_excesso_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Desejo por certos alimentos</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="desejo_alimentos_0" name="desejo_alimentos" value="0" required>
+                    <label for="desejo_alimentos_0">0</label>
+                    <input type="radio" id="desejo_alimentos_1" name="desejo_alimentos" value="1">
+                    <label for="desejo_alimentos_1">1</label>
+                    <input type="radio" id="desejo_alimentos_2" name="desejo_alimentos" value="2">
+                    <label for="desejo_alimentos_2">2</label>
+                    <input type="radio" id="desejo_alimentos_3" name="desejo_alimentos" value="3">
+                    <label for="desejo_alimentos_3">3</label>
+                    <input type="radio" id="desejo_alimentos_4" name="desejo_alimentos" value="4">
+                    <label for="desejo_alimentos_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Excesso de peso</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="excesso_peso_0" name="excesso_peso" value="0" required>
+                    <label for="excesso_peso_0">0</label>
+                    <input type="radio" id="excesso_peso_1" name="excesso_peso" value="1">
+                    <label for="excesso_peso_1">1</label>
+                    <input type="radio" id="excesso_peso_2" name="excesso_peso" value="2">
+                    <label for="excesso_peso_2">2</label>
+                    <input type="radio" id="excesso_peso_3" name="excesso_peso" value="3">
+                    <label for="excesso_peso_3">3</label>
+                    <input type="radio" id="excesso_peso_4" name="excesso_peso" value="4">
+                    <label for="excesso_peso_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Compulsão por comer</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="compulsao_comer_0" name="compulsao_comer" value="0" required>
+                    <label for="compulsao_comer_0">0</label>
+                    <input type="radio" id="compulsao_comer_1" name="compulsao_comer" value="1">
+                    <label for="compulsao_comer_1">1</label>
+                    <input type="radio" id="compulsao_comer_2" name="compulsao_comer" value="2">
+                    <label for="compulsao_comer_2">2</label>
+                    <input type="radio" id="compulsao_comer_3" name="compulsao_comer" value="3">
+                    <label for="compulsao_comer_3">3</label>
+                    <input type="radio" id="compulsao_comer_4" name="compulsao_comer" value="4">
+                    <label for="compulsao_comer_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Retenção de líquido</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="retencao_liquido_0" name="retencao_liquido" value="0" required>
+                    <label for="retencao_liquido_0">0</label>
+                    <input type="radio" id="retencao_liquido_1" name="retencao_liquido" value="1">
+                    <label for="retencao_liquido_1">1</label>
+                    <input type="radio" id="retencao_liquido_2" name="retencao_liquido" value="2">
+                    <label for="retencao_liquido_2">2</label>
+                    <input type="radio" id="retencao_liquido_3" name="retencao_liquido" value="3">
+                    <label for="retencao_liquido_3">3</label>
+                    <input type="radio" id="retencao_liquido_4" name="retencao_liquido" value="4">
+                    <label for="retencao_liquido_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Peso baixo</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="peso_baixo_0" name="peso_baixo" value="0" required>
+                    <label for="peso_baixo_0">0</label>
+                    <input type="radio" id="peso_baixo_1" name="peso_baixo" value="1">
+                    <label for="peso_baixo_1">1</label>
+                    <input type="radio" id="peso_baixo_2" name="peso_baixo" value="2">
+                    <label for="peso_baixo_2">2</label>
+                    <input type="radio" id="peso_baixo_3" name="peso_baixo" value="3">
+                    <label for="peso_baixo_3">3</label>
+                    <input type="radio" id="peso_baixo_4" name="peso_baixo" value="4">
+                    <label for="peso_baixo_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-peso">Soma da Categoria Peso: <span id="peso-sum">0</span></div>
+        </section>
+        <!-- energia-->
+        <section>
+            <h3>Energia/Atividade</h3>
+        
+            <div class="question">
+                <label>Fadiga/Lentidão/moleza</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="fadiga_0" name="fadiga" value="0" required>
+                    <label for="fadiga_0">0</label>
+                    <input type="radio" id="fadiga_1" name="fadiga" value="1">
+                    <label for="fadiga_1">1</label>
+                    <input type="radio" id="fadiga_2" name="fadiga" value="2">
+                    <label for="fadiga_2">2</label>
+                    <input type="radio" id="fadiga_3" name="fadiga" value="3">
+                    <label for="fadiga_3">3</label>
+                    <input type="radio" id="fadiga_4" name="fadiga" value="4">
+                    <label for="fadiga_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Apatia/letargia</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="apatia_0" name="apatia" value="0" required>
+                    <label for="apatia_0">0</label>
+                    <input type="radio" id="apatia_1" name="apatia" value="1">
+                    <label for="apatia_1">1</label>
+                    <input type="radio" id="apatia_2" name="apatia" value="2">
+                    <label for="apatia_2">2</label>
+                    <input type="radio" id="apatia_3" name="apatia" value="3">
+                    <label for="apatia_3">3</label>
+                    <input type="radio" id="apatia_4" name="apatia" value="4">
+                    <label for="apatia_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Hiperatividade</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="hiperatividade_0" name="hiperatividade" value="0" required>
+                    <label for="hiperatividade_0">0</label>
+                    <input type="radio" id="hiperatividade_1" name="hiperatividade" value="1">
+                    <label for="hiperatividade_1">1</label>
+                    <input type="radio" id="hiperatividade_2" name="hiperatividade" value="2">
+                    <label for="hiperatividade_2">2</label>
+                    <input type="radio" id="hiperatividade_3" name="hiperatividade" value="3">
+                    <label for="hiperatividade_3">3</label>
+                    <input type="radio" id="hiperatividade_4" name="hiperatividade" value="4">
+                    <label for="hiperatividade_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Inquietação / dificuldade de descansar</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="inquietacao_0" name="inquietacao" value="0" required>
+                    <label for="inquietacao_0">0</label>
+                    <input type="radio" id="inquietacao_1" name="inquietacao" value="1">
+                    <label for="inquietacao_1">1</label>
+                    <input type="radio" id="inquietacao_2" name="inquietacao" value="2">
+                    <label for="inquietacao_2">2</label>
+                    <input type="radio" id="inquietacao_3" name="inquietacao" value="3">
+                    <label for="inquietacao_3">3</label>
+                    <input type="radio" id="inquietacao_4" name="inquietacao" value="4">
+                    <label for="inquietacao_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-energia">Soma da Categoria Energia/Atividade: <span id="energia-sum">0</span></div>
+        </section>
+        <!--emoçoes-->
+        <section>
+            <h3>Emoções</h3>
+        
+            <div class="question">
+                <label>Variações de humor</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="variacoes_humor_0" name="variacoes_humor" value="0" required>
+                    <label for="variacoes_humor_0">0</label>
+                    <input type="radio" id="variacoes_humor_1" name="variacoes_humor" value="1">
+                    <label for="variacoes_humor_1">1</label>
+                    <input type="radio" id="variacoes_humor_2" name="variacoes_humor" value="2">
+                    <label for="variacoes_humor_2">2</label>
+                    <input type="radio" id="variacoes_humor_3" name="variacoes_humor" value="3">
+                    <label for="variacoes_humor_3">3</label>
+                    <input type="radio" id="variacoes_humor_4" name="variacoes_humor" value="4">
+                    <label for="variacoes_humor_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Ansiedade, medo, nervosismo</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="ansiedade_0" name="ansiedade" value="0" required>
+                    <label for="ansiedade_0">0</label>
+                    <input type="radio" id="ansiedade_1" name="ansiedade" value="1">
+                    <label for="ansiedade_1">1</label>
+                    <input type="radio" id="ansiedade_2" name="ansiedade" value="2">
+                    <label for="ansiedade_2">2</label>
+                    <input type="radio" id="ansiedade_3" name="ansiedade" value="3">
+                    <label for="ansiedade_3">3</label>
+                    <input type="radio" id="ansiedade_4" name="ansiedade" value="4">
+                    <label for="ansiedade_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Raiva, irritabilidade, agressividade</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="raiva_0" name="raiva" value="0" required>
+                    <label for="raiva_0">0</label>
+                    <input type="radio" id="raiva_1" name="raiva" value="1">
+                    <label for="raiva_1">1</label>
+                    <input type="radio" id="raiva_2" name="raiva" value="2">
+                    <label for="raiva_2">2</label>
+                    <input type="radio" id="raiva_3" name="raiva" value="3">
+                    <label for="raiva_3">3</label>
+                    <input type="radio" id="raiva_4" name="raiva" value="4">
+                    <label for="raiva_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Depressão</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="depressao_0" name="depressao" value="0" required>
+                    <label for="depressao_0">0</label>
+                    <input type="radio" id="depressao_1" name="depressao" value="1">
+                    <label for="depressao_1">1</label>
+                    <input type="radio" id="depressao_2" name="depressao" value="2">
+                    <label for="depressao_2">2</label>
+                    <input type="radio" id="depressao_3" name="depressao" value="3">
+                    <label for="depressao_3">3</label>
+                    <input type="radio" id="depressao_4" name="depressao" value="4">
+                    <label for="depressao_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-emocoes">Soma da Categoria Emoções: <span id="emocoes-sum">0</span></div>
+        </section>
+        <!--mente-->
+        <section>
+            <h3>Mente</h3>
+        
+            <div class="question">
+                <label>Memória fraca, ruim</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="memoria_fraca_0" name="memoria_fraca" value="0" required>
+                    <label for="memoria_fraca_0">0</label>
+                    <input type="radio" id="memoria_fraca_1" name="memoria_fraca" value="1">
+                    <label for="memoria_fraca_1">1</label>
+                    <input type="radio" id="memoria_fraca_2" name="memoria_fraca" value="2">
+                    <label for="memoria_fraca_2">2</label>
+                    <input type="radio" id="memoria_fraca_3" name="memoria_fraca" value="3">
+                    <label for="memoria_fraca_3">3</label>
+                    <input type="radio" id="memoria_fraca_4" name="memoria_fraca" value="4">
+                    <label for="memoria_fraca_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Dificuldade de compreensão. Confusão mental</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="dificuldade_compreensao_0" name="dificuldade_compreensao" value="0" required>
+                    <label for="dificuldade_compreensao_0">0</label>
+                    <input type="radio" id="dificuldade_compreensao_1" name="dificuldade_compreensao" value="1">
+                    <label for="dificuldade_compreensao_1">1</label>
+                    <input type="radio" id="dificuldade_compreensao_2" name="dificuldade_compreensao" value="2">
+                    <label for="dificuldade_compreensao_2">2</label>
+                    <input type="radio" id="dificuldade_compreensao_3" name="dificuldade_compreensao" value="3">
+                    <label for="dificuldade_compreensao_3">3</label>
+                    <input type="radio" id="dificuldade_compreensao_4" name="dificuldade_compreensao" value="4">
+                    <label for="dificuldade_compreensao_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Pouca concentração</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="pouca_concentracao_0" name="pouca_concentracao" value="0" required>
+                    <label for="pouca_concentracao_0">0</label>
+                    <input type="radio" id="pouca_concentracao_1" name="pouca_concentracao" value="1">
+                    <label for="pouca_concentracao_1">1</label>
+                    <input type="radio" id="pouca_concentracao_2" name="pouca_concentracao" value="2">
+                    <label for="pouca_concentracao_2">2</label>
+                    <input type="radio" id="pouca_concentracao_3" name="pouca_concentracao" value="3">
+                    <label for="pouca_concentracao_3">3</label>
+                    <input type="radio" id="pouca_concentracao_4" name="pouca_concentracao" value="4">
+                    <label for="pouca_concentracao_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Pouca coordenação física/motora</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="pouca_coordenacao_0" name="pouca_coordenacao" value="0" required>
+                    <label for="pouca_coordenacao_0">0</label>
+                    <input type="radio" id="pouca_coordenacao_1" name="pouca_coordenacao" value="1">
+                    <label for="pouca_coordenacao_1">1</label>
+                    <input type="radio" id="pouca_coordenacao_2" name="pouca_coordenacao" value="2">
+                    <label for="pouca_coordenacao_2">2</label>
+                    <input type="radio" id="pouca_coordenacao_3" name="pouca_coordenacao" value="3">
+                    <label for="pouca_coordenacao_3">3</label>
+                    <input type="radio" id="pouca_coordenacao_4" name="pouca_coordenacao" value="4">
+                    <label for="pouca_coordenacao_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Dificuldade em tomar decisões</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="dificuldade_tomar_decisoes_0" name="dificuldade_tomar_decisoes" value="0" required>
+                    <label for="dificuldade_tomar_decisoes_0">0</label>
+                    <input type="radio" id="dificuldade_tomar_decisoes_1" name="dificuldade_tomar_decisoes" value="1">
+                    <label for="dificuldade_tomar_decisoes_1">1</label>
+                    <input type="radio" id="dificuldade_tomar_decisoes_2" name="dificuldade_tomar_decisoes" value="2">
+                    <label for="dificuldade_tomar_decisoes_2">2</label>
+                    <input type="radio" id="dificuldade_tomar_decisoes_3" name="dificuldade_tomar_decisoes" value="3">
+                    <label for="dificuldade_tomar_decisoes_3">3</label>
+                    <input type="radio" id="dificuldade_tomar_decisoes_4" name="dificuldade_tomar_decisoes" value="4">
+                    <label for="dificuldade_tomar_decisoes_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Fala com repetição de sons ou palavras, com várias pausas involuntárias. Gagueira ou bloqueio de fala.</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="fala_repeticao_0" name="fala_repeticao" value="0" required>
+                    <label for="fala_repeticao_0">0</label>
+                    <input type="radio" id="fala_repeticao_1" name="fala_repeticao" value="1">
+                    <label for="fala_repeticao_1">1</label>
+                    <input type="radio" id="fala_repeticao_2" name="fala_repeticao" value="2">
+                    <label for="fala_repeticao_2">2</label>
+                    <input type="radio" id="fala_repeticao_3" name="fala_repeticao" value="3">
+                    <label for="fala_repeticao_3">3</label>
+                    <input type="radio" id="fala_repeticao_4" name="fala_repeticao" value="4">
+                    <label for="fala_repeticao_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Fala arrastada. Pronuncia palavras de forma indistinta, confusa.</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="fala_arrastada_0" name="fala_arrastada" value="0" required>
+                    <label for="fala_arrastada_0">0</label>
+                    <input type="radio" id="fala_arrastada_1" name="fala_arrastada" value="1">
+                    <label for="fala_arrastada_1">1</label>
+                    <input type="radio" id="fala_arrastada_2" name="fala_arrastada" value="2">
+                    <label for="fala_arrastada_2">2</label>
+                    <input type="radio" id="fala_arrastada_3" name="fala_arrastada" value="3">
+                    <label for="fala_arrastada_3">3</label>
+                    <input type="radio" id="fala_arrastada_4" name="fala_arrastada" value="4">
+                    <label for="fala_arrastada_4">4</label>
+                </div>
+            </div>
+        
+            <div class="question">
+                <label>Dificuldades de aprendizado</label>
+                <div class="checkbox-group">
+                    <input type="radio" id="dificuldades_aprendizado_0" name="dificuldades_aprendizado" value="0" required>
+                    <label for="dificuldades_aprendizado_0">0</label>
+                    <input type="radio" id="dificuldades_aprendizado_1" name="dificuldades_aprendizado" value="1">
+                    <label for="dificuldades_aprendizado_1">1</label>
+                    <input type="radio" id="dificuldades_aprendizado_2" name="dificuldades_aprendizado" value="2">
+                    <label for="dificuldades_aprendizado_2">2</label>
+                    <input type="radio" id="dificuldades_aprendizado_3" name="dificuldades_aprendizado" value="3">
+                    <label for="dificuldades_aprendizado_3">3</label>
+                    <input type="radio" id="dificuldades_aprendizado_4" name="dificuldades_aprendizado" value="4">
+                    <label for="dificuldades_aprendizado_4">4</label>
+                </div>
+            </div>
+        
+            <div class="category-score" id="score-mente">Soma da Categoria Mente: <span id="mente-sum">0</span></div>
+        </section>
+        <div class="info">
+            
+            <label>O que mais te incomoda hoje no seu corpo e na sua saúde. Me detalhe com o máximo de informações que puder:
+                <textarea name="incomodo" required></textarea>
+            </label>
+            
+            <label>Preciso que você detalhe aqui todos os medicamentos e suplementos que tem em casa (guardados ou não) e que faz uso diário ou só de vez em quando:
+                <textarea name="medicamentos" required></textarea>
+            </label>
+            
+            <label>Coloque em detalhes aqui, um dia inteiro seu. Todos os alimentos, bebidas, beliscadas, etc.:
+                <textarea name="habitos" required></textarea>
+            </label>
+        </div>
+        
+        
+        
+
+        <div class="total-score" id="total-score">Soma Total Geral: <span id="total-sum">0</span></div>
+
+        <button type="button" onclick="calculateScores()">Calcular Pontuação</button>
+        <button type="submit">Enviar Resultados</button>
+
+        <br><br>
+
+        <div>
+            
+            <p><span style="background-color: #afc4db31; color: rgba(19, 1, 1, 0.678);">Um total geral inferior a 10 é ideal. Um total de mais de 40 sugere a presença de uma
+                significativa inflamação tensionando sua cadeia. A categoria com a soma mais alta é,
+                provavelmente o elo frágil na sua cadeia. <br><br>
+                <strong>Teste do Institute for Functional Medicine.
+                    <br><br>
+                Ellen Guglielmetti
+                CRF/RN: 3148</strong>
+        </p>
+        <p> 
+          
+        </div>
+       
+    </form>
+
+    <script>
+       // Função para calcular o total da seção Cabeça
+function calculateCabecaScore() {
+    let cabecaSum = 0;
+
+    // Array com os nomes das questões da seção Cabeça
+    const cabecaQuestions = [
+        'cabeca_dores',
+        'cabeca_desmaio',
+        'cabeca_tontura',
+        'cabeca_insomnia'
+    ];
+
+    // Iterar sobre cada questão e somar os valores selecionados
+    cabecaQuestions.forEach(function (question) {
+        const radios = document.getElementsByName(question);
+        for (let i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                cabecaSum += parseInt(radios[i].value);
+                break; // Sai do loop após encontrar o botão de rádio selecionado
+            }
+        }
+    });
+
+    // Atualizar a soma na seção "cabeca-sum"
+    document.getElementById('cabeca-sum').textContent = cabecaSum;
+}
+
+// Adiciona um event listener para cada botão de rádio da seção Cabeça
+document.querySelectorAll('input[type="radio"][name^="cabeca"]').forEach(radio => {
+    radio.addEventListener('change', calculateCabecaScore);
+});
+
+        function calculateScores() {
+    let totalScore = 0;
+
+    // Cálculo para a categoria Cabeça
+    let cabecaScore = 0;
+    const cabecaQuestions = ["cabeca_dores", "cabeca_desmaio", "cabeca_tontura", "cabeca_insomnia"];
+    cabecaQuestions.forEach(q => {
+        const value = parseInt(document.querySelector(`input[name="${q}"]:checked`)?.value) || 0;
+        cabecaScore += value;
+    });
+    document.getElementById("cabeca-sum").innerText = cabecaScore;
+    totalScore += cabecaScore;
+
+  
+    // Cálculo para a categoria Nariz
+    let narizScore = 0;
+    const narizQuestions = ["nariz_entupido", "sinusite", "febre_feno", "ataques_espirro", "formacao_muco"];
+    narizQuestions.forEach(q => {
+        const value = parseInt(document.querySelector(`input[name="${q}"]:checked`)?.value) || 0;
+        narizScore += value;
+    });
+    document.getElementById("nariz-sum").innerText = narizScore;
+    totalScore += narizScore;
+    function calcularSomas() {
+    let bocaGargantaSum = 0;
+    let ouvidosSum = 0;
+
+    // Cálculo da soma da categoria Boca/Garganta
+  
+
+    // Exibindo o resultado da soma da categoria Boca/Garganta
+    document.getElementById('boca-garganta-sum').textContent = bocaGargantaSum;
+
+    // Cálculo da soma da categoria Ouvidos
+    const ouvidosQuestions = [
+        'coceira', 
+        'dores_infeccao', 
+        'supuracao', 
+        'zumbido'
+    ];
+
+    ouvidosQuestions.forEach(function (question) {
+        const radios = document.getElementsByName(question);
+        for (let i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                ouvidosSum += parseInt(radios[i].value);
+                break;
+            }
+        }
+    });
+
+    // Exibindo o resultado da soma da categoria Ouvidos
+    document.getElementById('ouvidos-sum').textContent = ouvidosSum;
+}
+//pulmoes
+
+    // Function to calculate the total score for the Pulmões section
+    function calculatePulmoesScore() {
+        let total = 0;
+
+        // Array of question names for Pulmões section
+        const questions = ['congestao_peito', 'asma', 'respiracao_curta', 'dificuldade_respirar'];
+
+        // Iterate over each question and sum the selected values
+        questions.forEach(question => {
+            // Get the selected radio button for the current question
+            const selected = document.querySelector(`input[name="${question}"]:checked`);
+            if (selected) {
+                total += parseInt(selected.value);
+            }
+        });
+
+        // Update the sum in the HTML
+        document.getElementById('pulmoes-sum').textContent = total;
+    }
+
+    // Attach event listeners to all radio buttons in the Pulmões section
+    document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+        radio.addEventListener('change', calculatePulmoesScore);
+    });
+
+
+
+// Chame esta função ao enviar o formulário ou ao alterar as opções de resposta
+document.querySelector('form').addEventListener('change', calcularSomas);
+
+
+    // Aqui você pode adicionar cálculos para outras categorias conforme necessário
+    
+
+    // Exibir o total geral, se necessário
+    console.log("Total Geral: ", totalScore);
+}
+// Function to calculate the total score for the Ouvidos section
+function calculateOuvidosScore() {
+        let total = 0;
+        
+        // Array of question names
+        const questions = ['coceira', 'dores_infeccao', 'supuracao', 'zumbido'];
+
+        // Iterate over each question and sum the selected values
+        questions.forEach(question => {
+            // Get the selected radio button for the current question
+            const selected = document.querySelector(`input[name="${question}"]:checked`);
+            if (selected) {
+                total += parseInt(selected.value);
+            }
+        });
+
+        // Update the sum in the HTML
+        document.getElementById('ouvidos-sum').textContent = total;
+    }
+
+    // Attach event listeners to all radio buttons in the Ouvidos section
+    document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+        radio.addEventListener('change', calculateOuvidosScore);
+    });
+    // Function to calculate the total score for the Trato Digestivo section
+    function calculateTratoDigestivoScore() {
+        let total = 0;
+        
+        // Array of question names
+        const questions = ['nausea_vomitos', 'diarreia', 'prisao', 'distensao', 'arrotos', 'azia', 'dor_estomago'];
+
+        // Iterate over each question and sum the selected values
+        questions.forEach(question => {
+            // Get the selected radio button for the current question
+            const selected = document.querySelector(`input[name="${question}"]:checked`);
+            if (selected) {
+                total += parseInt(selected.value);
+            }
+        });
+
+        // Update the sum in the HTML
+        document.getElementById('trato-digestivo-sum').textContent = total;
+    }
+
+    // Attach event listeners to all radio buttons in the Trato Digestivo section
+    document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+        radio.addEventListener('change', calculateTratoDigestivoScore);
+    });
+
+
+    </script>
+    <script>
+        // Function to calculate the total score for the Pulmões section
+        function calculatePulmoesScore() {
+            let pulmoesSum = 0;
+    
+            // Array of question names for the Pulmões section
+            const pulmoesQuestions = [
+                'congestao_peito', 
+                'asma', 
+                'respiracao_curta', 
+                'dificuldade_respirar'
+            ];
+    
+            // Iterate over each question and sum the selected values
+            pulmoesQuestions.forEach(function (question) {
+                const radios = document.getElementsByName(question);
+                for (let i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        pulmoesSum += parseInt(radios[i].value);
+                        break; // Exit the loop after finding the checked radio button
+                    }
+                }
+            });
+    
+            // Update the sum in the HTML
+            document.getElementById('pulmoes-sum').textContent = pulmoesSum;
+        }
+    
+        // Attach event listeners to all radio buttons in the Pulmões section
+        document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+            radio.addEventListener('change', calculatePulmoesScore);
+        });
+    </script>
+    <script>
+        // Function to calculate the total score for the Coração section
+        function calculateCoracaoScore() {
+            let coracaoSum = 0;
+    
+            // Array of question names for the Coração section
+            const coracaoQuestions = [
+                'batimento_irregular', 
+                'batimento_rapido', 
+                'dor_peito'
+            ];
+    
+            // Iterate over each question and sum the selected values
+            coracaoQuestions.forEach(function (question) {
+                const radios = document.getElementsByName(question);
+                for (let i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        coracaoSum += parseInt(radios[i].value);
+                        break; // Exit the loop after finding the checked radio button
+                    }
+                }
+            });
+    
+            // Update the sum in the HTML
+            document.getElementById('coracao-sum').textContent = coracaoSum;
+        }
+    
+        // Attach event listeners to all radio buttons in the Coração section
+        document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+            radio.addEventListener('change', calculateCoracaoScore);
+        });
+    </script>
+    <script>
+        // Function to calculate the total score for the Músculos e articulações section
+        function calculateMusculosArticulacoesScore() {
+            let musculosSum = 0;
+    
+            // Array of question names for the Músculos e articulações section
+            const musculosQuestions = [
+                'dor_articulacoes', 
+                'artrite', 
+                'rigidez', 
+                'dor_musculos', 
+                'fraqueza'
+            ];
+    
+            // Iterate over each question and sum the selected values
+            musculosQuestions.forEach(function (question) {
+                const radios = document.getElementsByName(question);
+                for (let i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        musculosSum += parseInt(radios[i].value);
+                        break; // Exit the loop after finding the checked radio button
+                    }
+                }
+            });
+    
+            // Update the sum in the HTML
+            document.getElementById('musculos-sum').textContent = musculosSum;
+        }
+    
+        // Attach event listeners to all radio buttons in the Músculos e articulações section
+        document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+            radio.addEventListener('change', calculateMusculosArticulacoesScore);
+        });
+    </script>
+    <script>
+        // Function to calculate the total score for the Pele section
+        function calculatePeleScore() {
+            let peleSum = 0;
+    
+            // Array of question names for the Pele section
+            const peleQuestions = [
+                'acne', 
+                'urticaria', 
+                'perda_cabelo', 
+                'rubores', 
+                'suor_excessivo'
+            ];
+    
+            // Iterate over each question and sum the selected values
+            peleQuestions.forEach(function (question) {
+                const radios = document.getElementsByName(question);
+                for (let i = 0; i < radios.length; i++) {
+                    if (radios[i].checked) {
+                        peleSum += parseInt(radios[i].value);
+                        break; // Exit the loop after finding the checked radio button
+                    }
+                }
+            });
+    
+            // Update the sum in the HTML
+            document.getElementById('pele-sum').textContent = peleSum;
+        }
+    
+        // Attach event listeners to all radio buttons in the Pele section
+        document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+            radio.addEventListener('change', calculatePeleScore);
+        });
+    </script>
+    <script>
+        // Function to calculate the total score for the Peso section
+        function calculatePesoScore() {
+            let pesoSum = 0;
+    
+            // Array of question names for the Peso section
+            const pesoQuestions = [
+                'comer_beber_excesso', 
+                'desejo_alimentos', 
+                'excesso_peso', 
+                'compulsao_comer', 
+                'retencao_liquido', 
+                'peso_baixo'
+            ];
+    
+            // Iterate over each question and sum the selected values
+            pesoQuestions.forEach(function (question) {
+                const checkedRadio = document.querySelector(`input[name="${question}"]:checked`);
+                if (checkedRadio) {
+                    pesoSum += parseInt(checkedRadio.value);
+                }
+            });
+    
+            // Update the sum in the HTML
+            document.getElementById('peso-sum').textContent = pesoSum;
+        }
+    
+        // Attach event listeners to all radio buttons in the Peso section
+        document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+            radio.addEventListener('change', calculatePesoScore);
+        });
+    </script>
+    <script>
+        // Function to calculate the total score for the Energia/Atividade section
+        function calculateEnergiaScore() {
+            let energiaSum = 0;
+    
+            // Array of question names for the Energia/Atividade section
+            const energiaQuestions = [
+                'fadiga', 
+                'apatia', 
+                'hiperatividade', 
+                'inquietacao'
+            ];
+    
+            // Iterate over each question and sum the selected values
+            energiaQuestions.forEach(function (question) {
+                const checkedRadio = document.querySelector(`input[name="${question}"]:checked`);
+                if (checkedRadio) {
+                    energiaSum += parseInt(checkedRadio.value);
+                }
+            });
+    
+            // Update the sum in the HTML
+            document.getElementById('energia-sum').textContent = energiaSum;
+        }
+    
+        // Attach event listeners to all radio buttons in the Energia/Atividade section
+        document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+            radio.addEventListener('change', calculateEnergiaScore);
+        });
+    </script>
+    <script>
+        // Function to calculate the total score for the Emoções section
+        function calculateEmocoesScore() {
+            let emocoesSum = 0;
+    
+            // Array of question names for the Emoções section
+            const emocoesQuestions = [
+                'variacoes_humor', 
+                'ansiedade', 
+                'raiva', 
+                'depressao'
+            ];
+    
+            // Iterate over each question and sum the selected values
+            emocoesQuestions.forEach(function (question) {
+                const checkedRadio = document.querySelector(`input[name="${question}"]:checked`);
+                if (checkedRadio) {
+                    emocoesSum += parseInt(checkedRadio.value);
+                }
+            });
+    
+            // Update the sum in the HTML
+            document.getElementById('emocoes-sum').textContent = emocoesSum;
+        }
+    
+        // Attach event listeners to all radio buttons in the Emoções section
+        document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+            radio.addEventListener('change', calculateEmocoesScore);
+        });
+
+        
+
+
+    </script>
+    <script>
+        function calculateMenteScore() {
+    let menteSum = 0;
+
+    // Array com os nomes das perguntas para a categoria Mente
+    const menteQuestions = [
+        'memoria_fraca', 
+        'dificuldade_compreensao', 
+        'pouca_concentracao', 
+        'pouca_coordenacao', 
+        'dificuldade_tomar_decisoes', 
+        'fala_repeticao', 
+        'fala_arrastada', 
+        'dificuldades_aprendizado'
+    ];
+
+    // Itera sobre cada pergunta e soma os valores selecionados
+    menteQuestions.forEach(function (question) {
+        const checkedRadio = document.querySelector(`input[name="${question}"]:checked`);
+        if (checkedRadio) {
+            menteSum += parseInt(checkedRadio.value);
+        }
+    });
+
+    // Atualiza a soma na HTML
+    document.getElementById('mente-sum').textContent = menteSum;
+}
+
+// Adiciona event listeners para atualizar a pontuação quando os valores são alterados
+document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+    radio.addEventListener('change', calculateMenteScore);
+});
+
+    </script>
+    <script>
+        function calculateScores() {
+    // Array com os IDs das categorias
+    const categoryIds = [
+        "cabeca-sum",
+        "olhos-sum",
+        "nariz-sum",
+        "boca-garganta-sum",
+        "ouvidos-sum",
+        "trato-digestivo-sum",
+        "pulmoes-sum",
+        "coracao-sum",
+        "musculos-sum",
+        "pele-sum",
+        "peso-sum",
+        "energia-sum",
+        "emocoes-sum",
+        "mente-sum"
+    ];
+
+    // Inicializar a soma total
+    let totalSum = 0;
+
+    // Iterar sobre cada ID, coletar o valor numérico e somar ao total
+    categoryIds.forEach(id => {
+        const element = document.getElementById(id);
+        if (element) {
+            const value = parseFloat(element.textContent) || 0;
+            totalSum += value;
+        }
+    });
+
+    // Atualizar o valor da soma total no elemento "total-sum"
+    document.getElementById("total-sum").textContent = totalSum;
+}
+
+    </script>
+    <script>
+        // soma olhos
+        // Função para calcular a pontuação total da seção Olhos
+function calculateOlhosScore() {
+    let olhosSum = 0;
+
+    // Array com os nomes das questões da seção Olhos
+    const olhosQuestions = [
+        'lacrimosos',
+        'inchados',
+        'bolsas',
+        'visao_borrada'
+    ];
+
+    // Itera sobre cada questão e soma os valores selecionados
+    olhosQuestions.forEach(function (question) {
+        const radios = document.getElementsByName(question);
+        for (let i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                olhosSum += parseInt(radios[i].value);
+                break; // Sai do loop após encontrar o botão de rádio selecionado
+            }
+        }
+    });
+
+    // Atualiza a soma no HTML
+    document.getElementById('olhos-sum').textContent = olhosSum;
+}
+
+// Adiciona event listeners a todos os botões de rádio na seção Olhos
+document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+    radio.addEventListener('change', calculateOlhosScore);
+});
+
+    </script>
+    <script>
+        // Função para calcular a pontuação total da seção Nariz
+function calculateNarizScore() {
+    let narizSum = 0;
+
+    // Array com os nomes das questões da seção Nariz
+    const narizQuestions = [
+        'nariz_entupido',
+        'sinusite',
+        'febre_feno',
+        'ataques_espirro',
+        'formacao_muco'
+    ];
+
+    // Itera sobre cada questão e soma os valores selecionados
+    narizQuestions.forEach(function (question) {
+        const radios = document.getElementsByName(question);
+        for (let i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                narizSum += parseInt(radios[i].value);
+                break; // Sai do loop após encontrar o botão de rádio selecionado
+            }
+        }
+    });
+
+    // Atualiza a soma no HTML
+    document.getElementById('nariz-sum').textContent = narizSum;
+}
+
+// Adiciona event listeners a todos os botões de rádio na seção Nariz
+document.querySelectorAll('input[type="radio"][name]').forEach(radio => {
+    radio.addEventListener('change', calculateNarizScore);
+});
+
+    </script>
+
+
+
+
+
+    <script>
+        // Função para calcular o total da seção Boca/Garganta
+function calculateBocaGargantaScore() {
+    let bocaGargantaSum = 0;
+
+    // Array com os nomes das questões da seção Boca/Garganta
+    const bocaGargantaQuestions = [
+        'tosse_cronica',
+        'engasgo',
+        'garganta_inflamada',
+        'lingua_inchada',
+        'aftas'
+    ];
+
+    // Iterar sobre cada questão e somar os valores selecionados
+    bocaGargantaQuestions.forEach(function (question) {
+        const selectedRadio = document.querySelector(`input[name="${question}"]:checked`);
+        if (selectedRadio) {
+            bocaGargantaSum += parseInt(selectedRadio.value);
+        }
+    });
+
+    // Atualizar a soma na seção "boca-garganta-sum"
+    document.getElementById('boca-garganta-sum').textContent = bocaGargantaSum;
+}
+
+// Adiciona um event listener para cada botão de rádio da seção Boca/Garganta
+document.querySelectorAll('input[type="radio"][name^="tosse_cronica"], input[type="radio"][name^="engasgo"], input[type="radio"][name^="garganta_inflamada"], input[type="radio"][name^="lingua_inchada"], input[type="radio"][name^="aftas"]').forEach(radio => {
+    radio.addEventListener('change', calculateBocaGargantaScore);
+});
+
+    </script>
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+   <script type="module">
+    
+  
+    // Inicializa o EmailJS com o seu User ID
+    emailjs.init("g8sWY7mPSsR0riu6m");  // Substitua pelo seu ID do EmailJS
+  </script>
+  
+  <script>
+ document.getElementById('metabolic-form').addEventListener('submit', function(event) {
+  event.preventDefault();  // Impede o envio tradicional do formulário
+
+  // Coleta os dados do formulário
+  const formData = new FormData(this);
+  const formValues = {};
+  let somaGeral = 0;  // Variável para armazenar a soma total
+
+  // Preenche o objeto formValues com os dados preenchidos pelo usuário
+  formData.forEach((value, key) => {
+    formValues[key] = value;  // Armazena todos os valores do formulário
+  });
+
+  // Monta a mensagem de e-mail
+  let message = "Estética e Saúde Integrativa - Rastreamento Metabólico - Últimos 30 Dias\n\n";
+  message += "Detalhes dos Sintomas Selecionados\n\n";
+  
+  // Inclui as informações básicas
+  message += "Informações Básicas:\n";
+  message += `Paciente: ${formValues['paciente'] || 'N/A'}\n`;  // Captura o nome do paciente
+  message += `Idade: ${formValues['idade'] || 'N/A'}\n`;
+  message += `Peso: ${formValues['peso'] || 'N/A'} kg\n`;
+  message += `Altura: ${formValues['altura'] || 'N/A'} cm\n\n`;
+
+  // Acrescenta as novas perguntas ao conteúdo da mensagem
+  message += "Questões Adicionais:\n";
+  message += `O que mais incomoda: ${formValues['incomodo'] || 'N/A'}\n`;
+  message += `Medicamentos e suplementos: ${formValues['medicamentos'] || 'N/A'}\n`;
+  message += `Dia típico (alimentos, bebidas, etc.): ${formValues['habitos'] || 'N/A'}\n\n`;
+
+  // Define as categorias e sintomas correspondentes
+  const categories = {
+    "Cabeça": ["cabeca_dores", "cabeca_desmaio", "cabeca_tontura", "cabeca_insomnia"],
+    "Olhos": ["lacrimosos", "inchados", "bolsas", "visao_borrada"],
+    "Nariz": ["nariz_entupido", "sinusite", "febre_feno", "ataques_espirro", "formacao_muco"],
+    "Boca/Garganta": ["tosse_cronica", "engasgo", "garganta_inflamada", "lingua_inchada", "aftas"],
+    "Ouvidos": ["coceira", "dores_infeccao", "supuracao", "zumbido"],
+    "Trato Digestivo": ["nausea_vomitos", "diarreia", "prisao", "distensao", "arrotos", "azia", "dor_estomago"],
+    "Pulmões": ["congestao_peito", "asma", "respiracao_curta", "dificuldade_respirar"],
+    "Coração": ["batimento_irregular", "batimento_rapido", "dor_peito"],
+    "Músculos e Articulações": ["dor_articulacoes", "artrite", "rigidez", "dor_musculos", "fraqueza"],
+    "Pele": ["acne", "urticaria", "perda_cabelo", "rubores", "suor_excessivo"],
+    "Peso": ["comer_beber_excesso", "desejo_alimentos", "excesso_peso", "compulsao_comer", "retencao_liquido", "peso_baixo"],
+    "Energia/Atividade": ["fadiga", "apatia", "hiperatividade", "inquietacao"],
+    "Emoções": ["variacoes_humor", "ansiedade", "raiva", "depressao"],
+    "Mente": ["memoria_fraca", "dificuldade_compreensao", "pouca_concentracao", "pouca_coordenacao", "dificuldade_tomar_decisoes", "fala_repeticao", "fala_arrastada", "dificuldades_aprendizado"]
+  };
+
+  // Itera sobre as categorias e sintomas, adicionando ao relatório apenas os sintomas preenchidos
+  for (const [category, symptoms] of Object.entries(categories)) {
+    let categoryContent = `${category}:\n`;
+    let categorySum = 0;  // Variável para armazenar a soma da categoria
+    let hasSymptoms = false;
+
+    symptoms.forEach(symptom => {
+      // Verifica se o sintoma foi preenchido e é um número maior que zero
+      if (formValues[symptom] && !isNaN(formValues[symptom]) && parseFloat(formValues[symptom]) > 0) {
+        const formattedSymptom = symptom.replace(/_/g, " ").toLowerCase().replace(/\b\w/g, l => l.toUpperCase());
+        categoryContent += `${formattedSymptom}: ${formValues[symptom]}\n`;
+        categorySum += parseFloat(formValues[symptom]);  // Soma os valores da categoria
+        hasSymptoms = true;
+      }
+    });
+
+    if (hasSymptoms) {
+      message += categoryContent;
+      message += `Soma da Categoria "${category}": ${categorySum}\n\n`; // Adiciona a soma da categoria
+      somaGeral += categorySum; // Soma a soma da categoria ao total geral
+    }
+  }
+
+  // Adiciona a soma total ao final da mensagem
+  message += `Soma Geral: ${somaGeral}\n`;
+
+  // Envia os dados formatados para o EmailJS
+  emailjs.send("service_pgi21eb", "template_qz3g54u", { message })
+    .then(function(response) {
+      alert('Formulário enviado com sucesso!');
+    }, function(error) {
+      alert('Ocorreu um erro no envio: ' + error.text);
+    });
+});
+
+
+  </script>
+  
+</body>
+</html>
