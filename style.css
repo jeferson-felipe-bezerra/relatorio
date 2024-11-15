@@ -1,21 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
+    background-color: #fff6f6;
+    color: #234719;
     margin: 20px;
     padding: 0;
     
 }
 h1, h2 {
     text-align: center;
-    color: #4a90e2;
+    color:#234719;
     
 }
 form {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background: #fff;
+    background:#fff6f6;
+    background-image: url("img/petalas.png");
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -43,8 +44,8 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #e9f3ff;
-    color: #4a90e2;
+    background: #ebf3e9;
+    color: #234719;
     border-radius: 5px;
     width: 38px;
     height: 38px;
@@ -53,13 +54,14 @@ section {
     transition: background-color 0.3s;
 }
 .checkbox-group label:hover {
-    background-color: #cce4ff;
+    background-color: #234719;
+    color: white;
 }
 .checkbox-group input[type="radio"] {
     display: none;
 }
 .checkbox-group input[type="radio"]:checked + label {
-    background-color: #4a90e2;
+    background-color:#234719;
     color: #fff;
 }
 button {
@@ -68,14 +70,14 @@ button {
     font-size: 16px;
     width: 100%;
     color: #fff;
-    background-color: #4a90e2;
+    background-color: #234719;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 button:hover {
-    background-color: #357ab7;
+    background-color: #214416a9;
 }
 .info label {
     display: block;
@@ -93,7 +95,7 @@ button:hover {
 #total-score, .category-score {
     font-size: 18px;
     font-weight: bold;
-    color: #4a90e2;
+    color: #234719;
 }
 .info {
     margin-bottom: 20px;
